@@ -1,6 +1,5 @@
 .not-found {
-  background-color: rgb(37, 61, 88);
-  min-height: 100vh;
+
 
   &__container {
     height: 100%;
@@ -10,16 +9,14 @@
     align-items: center;
 
     &__message {
-      color:whitesmoke
     }
 
     &__link {
       text-decoration: none;
       text-transform: uppercase;
-      color: whitesmoke;
 
       &:hover{
-        color:gray
+        color:#4056A1
       }
     }
   }
