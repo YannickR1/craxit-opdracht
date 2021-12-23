@@ -19,7 +19,13 @@
       >
       
       <input type="password" name="psw" id="psw" required/>
+
+      <div>     
+        <input type="checkbox" (click)="togglePassword()" />
+        <label id="psw-toggle" class="register__container__form__label__toggle" >Show password</label>
+      </div>
     </form>
+    
 
     <p>
       Already have an account? Login

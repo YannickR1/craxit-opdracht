@@ -18,13 +18,17 @@
     border-radius: 5px;
     box-shadow: 1px 1px 10px #03213f;
 
-    &__form{
+    &__form {
       display: flex;
       flex-direction: column;
       margin: 2em;
 
-      &__label{
+      &__label {
         margin: 0.5em 0em;
+
+        &__toggle {
+          margin-left: 0.5em;
+        }
       }
     }
 
