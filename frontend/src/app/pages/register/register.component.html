@@ -1,0 +1,29 @@
+<section class="register">
+  <div class="register__container">
+    <h1 class="register__title">Register here</h1>
+    <form action="POST" class="register__container__form">
+      <label for="firstName" class="register__container__form__label"
+        >First name</label
+      >
+      <input type="text" name="firstName" id="firstName" required/>
+      <label for="lastName" class="register__container__form__label"
+        >Last name</label
+      >
+      <input type="text" name="lastName" id="lastName" required/>
+      <label for="email" class="register__container__form__label"
+        >Email</label
+      >
+      <input type="text" name="email" id="email" required/>
+      <label for="psw" class="register__container__form__label"
+        >Password</label
+      >
+      
+      <input type="password" name="psw" id="psw" required/>
+    </form>
+
+    <p>
+      Already have an account? Login
+      <a routerLink="/login" class="register__container__link">here</a>
+    </p>
+  </div>
+</section>

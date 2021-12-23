@@ -1,0 +1,23 @@
+<section class="login">
+  <div class="login__container">
+    <h1 class="login__title">Login here</h1>
+    <form action="GET" class="login__container__form">
+      <label for="email" class="login__container__form__label">Email</label>
+      <input type="text" name="email" id="email" />
+      <label for="password" class="login__container__form__label"
+        >Password</label
+      >
+      <input type="password" name="password" id="password" />
+
+      <div>     
+        <input type="checkbox" (click)="togglePassword()" />
+        <label id="psw-toggle" class="login__container__form__label__toggle" >Show password</label>
+      </div>
+    </form>
+
+    <p>
+      Don't have an account yet? Register
+      <a routerLink="/register" class="login__container__link">here</a>
+    </p>
+  </div>
+</section>
