@@ -1,7 +1,11 @@
-<section *ngIf="loggedIn">
-    <app-home></app-home>
+<div *ngIf="loggedIn">
+<section>
+    <app-navbar></app-navbar>
+    <h1>Welcome to the Housing Browser</h1>
+    <app-house-list></app-house-list>
 </section>
-<section *ngIf="!loggedIn">
+</div>
+<div *ngIf="!loggedIn">
     <app-login></app-login>
-</section>
+</div>
 
