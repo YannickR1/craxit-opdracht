@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  
+  width: 100%;
+  padding: 2px;
+  background-color: #05386b;
+  &__title{
+    margin-left: 1em;
+  }
+}
