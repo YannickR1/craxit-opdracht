@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HouseListComponent } from './components/house-list/house-list.component';
+import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HouseListComponent } from './components/house-list/house-list.component
     HeaderComponent,
     RegisterComponent,
     NotFoundComponent,
-    HouseListComponent
+    HouseListComponent,
+    LogoutButtonComponent
   ],
   imports: [
     BrowserModule,
