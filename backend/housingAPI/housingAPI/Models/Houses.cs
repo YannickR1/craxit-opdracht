@@ -5,11 +5,11 @@ namespace housingAPI.Models
 {
     public partial class Houses
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string? Name { get; set; }
         public string? City { get; set; }
         public long? Rooms { get; set; }
-        public byte[]? Price { get; set; }
+        public decimal Price { get; set; }
         public byte[]? Image { get; set; }
     }
 }
