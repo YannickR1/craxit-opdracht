@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-house-list',
@@ -17,9 +18,13 @@ export class HouseListComponent implements OnInit {
     { id: 8, name: 'Duplex', city: 'Mortsel', rooms: 3 },
   ];
 
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  fetchHouses()
 
 }
