@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-house-list',
@@ -7,6 +8,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./house-list.component.scss']
 })
 export class HouseListComponent implements OnInit {
+  private apiUrl = 'https://localhost:7086/api/Houses'
+  houseList = [];
+  constructor (
+    private httpClient: HttpClient
+
+  ) {}
+
   staticHouseList = [
     { id: 1, name: 'my House', city: 'Mortsel', rooms: 3 },
     { id: 2, name: 'Penthouse', city: 'Antwerpen', rooms: 2 },
@@ -18,13 +26,16 @@ export class HouseListComponent implements OnInit {
     { id: 8, name: 'Duplex', city: 'Mortsel', rooms: 3 },
   ];
 
-
-
-  constructor() { }
-
   ngOnInit(): void {
   }
 
-  fetchHouses()
+  getHouses() {
+    this.httpClient.get<any>(this.apiUrl).subscribe(
+      response => {
+        this.houseList = response;
+        console.log(this.houseList)
+      }
+    )
+  }
 
 }
