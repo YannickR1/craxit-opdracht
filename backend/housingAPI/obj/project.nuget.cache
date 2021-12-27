@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "VyhFtZQXMPNllMVSZkR4EZ14RRA8sm7Mg9W3V7ZC98Mo1Br+ReFU5Um7EJGOFMZ9ZlCV55wHShRpxfF4syRrEQ==",
+  "dgSpecHash": "X/EMGMOrMWWI9Gnxz3ZkniAdhaKwLUu5ym/BtCD4D5IHEfvsMlUhx06FCx2gr6izHwKq2plk9doCfIcDrLfBGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\housingAPI\\housingAPI.csproj",
+  "projectFilePath": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\HousingAPI\\HousingAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\yanni\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\yanni\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\yanni\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.1\\microsoft.data.sqlite.core.6.0.1.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.1\\microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",
@@ -43,7 +42,6 @@
     "C:\\Users\\yanni\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.0\\system.identitymodel.tokens.jwt.6.15.0.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
-    "C:\\Users\\yanni\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",

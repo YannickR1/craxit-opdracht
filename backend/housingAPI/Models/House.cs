@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace housingAPI.Models
+namespace HousingAPI.Models
 {
     public partial class House
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string? Name { get; set; }
         public string? City { get; set; }
-        public int Rooms { get; set; }
-        public decimal Price { get; set; }
+        public long? Rooms { get; set; }
+        public byte[]? Price { get; set; }
         public byte[]? Image { get; set; }
     }
 }

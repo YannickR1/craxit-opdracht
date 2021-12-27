@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\housingAPI\\housingAPI.csproj": {}
+    "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\HousingAPI\\HousingAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\housingAPI\\housingAPI.csproj": {
+    "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\HousingAPI\\HousingAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\housingAPI\\housingAPI.csproj",
-        "projectName": "housingAPI",
-        "projectPath": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\housingAPI\\housingAPI.csproj",
+        "projectUniqueName": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\HousingAPI\\HousingAPI.csproj",
+        "projectName": "HousingAPI",
+        "projectPath": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\HousingAPI\\HousingAPI.csproj",
         "packagesPath": "C:\\Users\\yanni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\housingAPI\\obj\\",
+        "outputPath": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\HousingAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,10 +40,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[10.1.1, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

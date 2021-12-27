@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "5ehPGbuVT7qv+EZkPZbkDzB3lDHMVYpSYnmESRU4fwk=",
-  "Source": "housingAPI",
-  "BasePath": "_content/housingAPI",
+  "Hash": "Ei2kvhuzo/PnaewU67mlUTQCaUtzqRF8UtCgJqUiEb8=",
+  "Source": "HousingAPI",
+  "BasePath": "_content/HousingAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

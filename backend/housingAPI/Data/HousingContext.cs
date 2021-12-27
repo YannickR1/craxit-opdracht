@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using housingAPI.Models;
+using HousingAPI.Models;
 
-namespace housingAPI.Data
+namespace HousingAPI.Data
 {
     public partial class HousingContext : DbContext
     {
@@ -19,7 +19,6 @@ namespace housingAPI.Data
 
         public virtual DbSet<House> Houses { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
-        public virtual DbSet<Usersdto> Usersdtos { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -42,13 +41,6 @@ namespace housingAPI.Data
 
                 entity.HasIndex(e => e.Username, "IX_USERS_Username")
                     .IsUnique();
-            });
-
-            modelBuilder.Entity<Usersdto>(entity =>
-            {
-                entity.HasKey(e => e.Username);
-
-                entity.ToTable("USERSDTO");
             });
 
             OnModelCreatingPartial(modelBuilder);

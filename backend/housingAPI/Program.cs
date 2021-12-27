@@ -1,4 +1,4 @@
-using housingAPI.Data;
+using HousingAPI.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +10,7 @@ builder.Services.AddDbContext<HousingContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("housingDB"));
 });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
