@@ -2,6 +2,7 @@
 using HousingAPI.Data;
 using HousingAPI.DTO;
 using HousingAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
@@ -12,18 +13,16 @@ using System.Text;
 public class UserController : ControllerBase
 {
     private readonly HousingContext _context;
-    private readonly ITokenService _tokenService;
 
-    public UserController(HousingContext context, ITokenService tokenService)
+    public UserController(HousingContext context)
     {
         _context = context;
-        _tokenService = tokenService;
     }
 
     [HttpPost("register")]
     public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
     {
-        if (await UserExists(registerDto.Username)) return BadRequest("UserName Is Already Taken");
+        if (await UserExists(registerDto.Username)) return BadRequest("Username already in use");
         var hmac = new HMACSHA512();
 
         var user = new User
@@ -40,7 +39,6 @@ public class UserController : ControllerBase
         return new UserDto
         {
             Username = user.Username,
-            Token = _tokenService.CreateToken(user)
         };
     }
 
@@ -71,7 +69,6 @@ public class UserController : ControllerBase
         return new UserDto
         {
             Username = user.Username,
-            Token = _tokenService.CreateToken(user)
         };
 
 
