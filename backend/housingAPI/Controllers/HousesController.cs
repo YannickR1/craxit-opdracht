@@ -1,7 +1,5 @@
 ﻿using HousingAPI.Data;
 using HousingAPI.Models;
-using HousingAPI.Data;
-using HousingAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 

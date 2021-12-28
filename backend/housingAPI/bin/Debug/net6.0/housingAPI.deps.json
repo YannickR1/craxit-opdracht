@@ -30,12 +30,6 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.1": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
-            "assemblyVersion": "6.0.1.0",
-            "fileVersion": "6.0.121.56714"
-          }
         }
       },
       "Microsoft.CSharp/4.5.0": {},
