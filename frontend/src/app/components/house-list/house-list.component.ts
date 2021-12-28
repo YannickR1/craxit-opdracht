@@ -16,4 +16,17 @@ export class HouseListComponent implements OnInit {
     this.houseService.getHouses().subscribe((houses) => this.houses = houses);
   }
 
+  addHouse(){
+    console.log('Add House')
+  }
+
+  deleteHouse(house: House){
+
+    this.houseService
+      .deleteHouse(house)
+      .subscribe(
+        () => (this.houses = this.houses.filter((h) => h.id !== house.id))
+        );
+  }
+
 }

@@ -9,14 +9,18 @@ import {HOUSES} from '../mock-houses';
   providedIn: 'root'
 })
 export class HouseService {
-  // private apiUrl = "https://localhost:7257/api/Houses"
+  // private apiUrl = "https://localhost:7257/api/Houses" .net backend not working yet
+  private apiUrl = "http://localhost:5000" //mock backend
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   getHouses(): Observable<House[]> {
-    const houses = of(HOUSES);
-    return houses
+    return this.http.get<House[]>(this.apiUrl + '/houses');
+  }
 
-    // return this.http.get<House[]>(this.apiUrl)
+  deleteHouse(house: House): Observable<House>{
+    const url = `${this.apiUrl}/houses/${house.id}`
+    
+    return this.http.delete<House>(url)
   }
 }

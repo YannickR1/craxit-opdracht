@@ -1,0 +1,11 @@
+{
+  "houses": [
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "yannick",
+      "password": "qwerty1"
+    }
+  ]
+}
