@@ -16,30 +16,8 @@
     flex-direction: column;
 
     &__house {
-        height: 100%;
-
-        &:not(:last-child){
-            border-bottom: 1px white dotted;
-        }
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-
-
-      &__name {
-        color: #86C232;
-        margin: .5em 0;
-      }
-
-      &__location{
-          color:#61892f;
-          margin: .5em 1em; 
-      }
-
-      &__buttons{
-          display: flex;
+      &:not(:last-child) {
+        border-bottom: 1px white dotted;
       }
     }
   }

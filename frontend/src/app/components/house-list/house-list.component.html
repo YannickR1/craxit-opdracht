@@ -1,18 +1,12 @@
 <section class="house-list">
   <h1 class="house-list__title">Current houses</h1>
   <div class="house-list__container">
-    <article *ngFor="let house of houses" class="house-list__container__house">
-      <div>
-        <h2 class="house-list__container__house__name">{{ house.name }}</h2>
-        <p class="house-list__container__house__location">
-          Location: {{ house.city }}
-        </p>
-      </div>
-      <div class="house-list__container__house__buttons">
-        <app-button text="More details"></app-button>
-        <app-remove-button></app-remove-button>
-      </div>
-    </article>
+
+    <app-house-list-item *ngFor="let house of houses" [house]="house" class="house-list__container__house">
+      <p>{{house.name}}</p>
+    </app-house-list-item>
+
+
   </div>
   <app-button text="Add house"></app-button>
 </section>

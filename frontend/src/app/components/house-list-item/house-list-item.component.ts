@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {House} from '../../House'
 
 @Component({
   selector: 'app-house-list-item',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./house-list-item.component.scss']
 })
 export class HouseListItemComponent implements OnInit {
+  @Input() house!: House;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.house)
   }
 
 }
