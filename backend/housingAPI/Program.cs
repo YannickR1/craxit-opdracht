@@ -2,15 +2,13 @@ using HousingAPI.Data;
 using HousingAPI.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-
-
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 

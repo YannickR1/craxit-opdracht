@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { HouseService } from '../../services/house.service';
 import {House} from '../../House'
-import {HOUSES} from '../../mock-houses'
 
 @Component({
   selector: 'app-house-list',
@@ -8,11 +8,12 @@ import {HOUSES} from '../../mock-houses'
   styleUrls: ['./house-list.component.scss']
 })
 export class HouseListComponent implements OnInit {
-  houses: House[] = HOUSES;
+  houses: House[] = [];
 
-  constructor() { }
+  constructor(private houseService: HouseService) { }
 
   ngOnInit(): void {
+    this.houseService.getHouses().subscribe((houses) => this.houses = houses);
   }
 
 }
