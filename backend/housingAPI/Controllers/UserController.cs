@@ -1,6 +1,7 @@
 ﻿
 using HousingAPI.Data;
 using HousingAPI.DTO;
+using HousingAPI.Interfaces;
 using HousingAPI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +14,13 @@ using System.Text;
 public class UserController : ControllerBase
 {
     private readonly HousingContext _context;
+    private readonly ITokenService _tokenService;
 
-    public UserController(HousingContext context)
+    public UserController(HousingContext context, ITokenService tokenService)
     {
         _context = context;
+        _tokenService = tokenService;
+
     }
 
     [HttpPost("register")]
@@ -39,6 +43,8 @@ public class UserController : ControllerBase
         return new UserDto
         {
             Username = user.Username,
+            Token = _tokenService.CreateToken(user)
+
         };
     }
 
@@ -69,9 +75,9 @@ public class UserController : ControllerBase
         return new UserDto
         {
             Username = user.Username,
+            Token = _tokenService.CreateToken(user)
+
         };
-
-
     }
 
 }
