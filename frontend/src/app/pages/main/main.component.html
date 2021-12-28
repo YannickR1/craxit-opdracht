@@ -1,1 +1,9 @@
-<app-header></app-header>
+<section class="logged-in" *ngIf="isLoggedIn">
+    <app-header></app-header>
+    <app-house-list></app-house-list>
+</section>
+
+<section class="logged-out" *ngIf="!isLoggedIn">
+    <app-login></app-login>
+</section>
+

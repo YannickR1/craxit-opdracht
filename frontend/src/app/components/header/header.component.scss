@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222629;
+
+    &__title{
+        margin: 0 .5em;
+        color:#85c232;
+    }
+}
