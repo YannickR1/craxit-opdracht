@@ -1,12 +1,12 @@
 <section class="add-house">
     <form class="add-house__form" (ngSubmit)="onSubmit()">
         <div class="add-house__form__container">
-            <label for="name">House</label>
+            <label for="name">What would you call the house?</label>
             <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="House name">
         </div>
         <div class="add-house__form__container">
-            <label for="location">Where is the house located</label>
-            <input type="text" name="location" [(ngModel)]="location" id="location" placeholder="City">
+            <label for="city">In which city is the house located?</label>
+            <input type="text" name="city" [(ngModel)]="city" id="city" placeholder="City">
         </div>
         <div class="add-house__form__container">
             <label for="rooms">How many rooms?</label>

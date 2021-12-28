@@ -2,8 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of} from 'rxjs';
 import {House} from '../House';
-import {HOUSES} from '../mock-houses';
 
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-type': 'application/json'
+  })
+}
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +26,9 @@ export class HouseService {
     const url = `${this.apiUrl}/houses/${house.id}`
     
     return this.http.delete<House>(url)
+  }
+
+  addHouse(house: House):Observable<House> {
+    return this.http.post<House>(this.apiUrl + '/houses', house, httpOptions);
   }
 }

@@ -1,5 +1,69 @@
 {
   "houses": [
+    {
+      "id": 1,
+      "name": "My House",
+      "city": "Mortsel",
+      "rooms": 13,
+      "price": 550000,
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Penthouse A",
+      "city": "Antwerp",
+      "rooms": 8,
+      "price": 1340000,
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "Studio",
+      "city": "Gent",
+      "rooms": 2,
+      "price": 210000,
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "Appartment 1",
+      "city": "Antwerp",
+      "rooms": 7,
+      "price": 180000,
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "Summer house",
+      "city": "Durbuy",
+      "rooms": 13,
+      "price": 380000,
+      "image": ""
+    },
+    {
+      "id": 6,
+      "name": "Duplex",
+      "city": "Mechlen",
+      "rooms": 8,
+      "price": 280000,
+      "image": ""
+    },
+    {
+      "id": 7,
+      "name": "Appartment 2",
+      "city": "Leuven",
+      "rooms": 6,
+      "price": 199280,
+      "image": ""
+    },
+    {
+      "id": 8,
+      "name": "Row House 1",
+      "city": "Brussel",
+      "rooms": 12,
+      "price": 410000,
+      "image": ""
+    }
   ],
   "users": [
     {

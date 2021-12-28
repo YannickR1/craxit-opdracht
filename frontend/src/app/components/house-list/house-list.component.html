@@ -1,7 +1,7 @@
 <section class="house-list">
   <h1 class="house-list__title">Current houses</h1>
 
-  <app-add-house></app-add-house>
+  <app-add-house (onAddHouse)="addHouse($event)"></app-add-house>
 
   <div class="house-list__container">
     <app-house-list-item *ngFor="let house of houses" [house]="house" class="house-list__container__house" (onDeleteHouse)="deleteHouse(house)">
@@ -10,5 +10,5 @@
 
 
   </div>
-  <app-button text="Add house" (btnClick)="addHouse()"></app-button>
+  <app-button text="Add house" (btnClick)="addHouseToggle()"></app-button>
 </section>

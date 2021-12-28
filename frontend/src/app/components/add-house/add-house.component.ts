@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { House } from '../../House'
 
 @Component({
   selector: 'app-add-house',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-house.component.scss']
 })
 export class AddHouseComponent implements OnInit {
+  @Output() onAddHouse: EventEmitter<House> = new EventEmitter()
+
   name: string;
-  location: string;
+  city: string;
   rooms: number;
   price: number;
   image: string;
@@ -22,7 +25,7 @@ export class AddHouseComponent implements OnInit {
       alert('Please add a name for the house')
       return
     }
-    if(!this.location){
+    if(!this.city){
       alert('Please add a location for the house')
       return
     }
@@ -37,14 +40,19 @@ export class AddHouseComponent implements OnInit {
 
     const newHouse = {
       name: this.name,
-      location: this.location,
+      city: this.city,
       rooms: this.rooms,
       price: this.price,
       image: this.image
-    }
+    };
 
+    this.onAddHouse.emit(newHouse);
 
-
+    this.name = "",
+    this.city = "",
+    this.rooms = 0,
+    this.price = 0,
+    this.image = ""
   }
 
 }
