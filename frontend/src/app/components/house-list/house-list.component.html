@@ -1,7 +1,9 @@
 <section class="house-list">
   <h1 class="house-list__title">Current houses</h1>
-  <div class="house-list__container">
 
+  <app-add-house></app-add-house>
+
+  <div class="house-list__container">
     <app-house-list-item *ngFor="let house of houses" [house]="house" class="house-list__container__house" (onDeleteHouse)="deleteHouse(house)">
       <p>{{house.name}}</p>
     </app-house-list-item>

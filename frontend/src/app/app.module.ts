@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -14,6 +15,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { HouseDetailsComponent } from './pages/house-details/house-details.component';
 import { RemoveButtonComponent } from './components/remove-button/remove-button.component';
 import { HouseListItemComponent } from './components/house-list-item/house-list-item.component';
+import { AddHouseComponent } from './components/add-house/add-house.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +30,13 @@ import { HouseListItemComponent } from './components/house-list-item/house-list-
     HouseDetailsComponent,
     RemoveButtonComponent,
     HouseListItemComponent,
+    AddHouseComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
