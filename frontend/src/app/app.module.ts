@@ -11,6 +11,8 @@ import { MainComponent } from './pages/main/main.component';
 import { HouseListComponent } from './components/house-list/house-list.component';
 import { ButtonComponent } from './components/button/button.component';
 import { HouseDetailsComponent } from './pages/house-details/house-details.component';
+import { RemoveButtonComponent } from './components/remove-button/remove-button.component';
+import { HouseListItemComponent } from './components/house-list-item/house-list-item.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { HouseDetailsComponent } from './pages/house-details/house-details.compo
     HouseListComponent,
     ButtonComponent,
     HouseDetailsComponent,
+    RemoveButtonComponent,
+    HouseListItemComponent,
   ],
   imports: [
     BrowserModule,
