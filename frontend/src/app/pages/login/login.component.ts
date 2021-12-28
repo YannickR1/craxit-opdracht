@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  username: string;
+  password: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  onLogin(){
+    if(!this.username){
+      alert('Please enter a username')
+      return
+    }
+    if(!this.password){
+      alert('Please enter a password')
+      return
+    }
+  }
 }

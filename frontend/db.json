@@ -77,6 +77,13 @@
       "rooms": 12,
       "price": 1234234,
       "id": 10
+    },
+    {
+      "name": "Italian Summer House",
+      "city": "Perugia",
+      "rooms": 14,
+      "price": 750000,
+      "id": 11
     }
   ],
   "users": [
