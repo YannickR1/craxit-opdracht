@@ -16,3 +16,7 @@ Maak een applicatie waar mensen kunnen registereren en op inloggen.
 Zodra ze ingelogged zijn krijgen ze een lijst van hmm laten we zeggen huizen (moeten geen images bij gewoon droge lijst van huizen is goed), 
 en kunnen ze er 1 selecteren voor details of te  editeren alsook een nieuw huis te maken of te deleten. (CRUD dus)
 Een huis heeft volgende kenmerken: Location (gewoon de stadsnaam bv), Prize(in euro), Rooms, Image
+
+Eigen comments:
+momenteel geen gebruik gemaakt van automapper, 
+JWT geimplementeerd maar authorization niet compleet
