@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "dAyZtVKEbeS6fwyhJmKTF9zdmJjsKMceKlseQUnRXmgUAN1KunzANoCZmlguJx2QT38G3koXHJyD67g7cJ045w==",
+  "dgSpecHash": "vNr1wgRwfGUjqlQGxKKmkAV7hp2md1PEhrp3upe9Zv9JOJzQx58s4Qxd3XuK8793Jj9MeFzNvxm/nkFu1K8wCQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\yanni\\Documents\\Coding\\craxit-opdracht\\backend\\HousingAPI\\HousingAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yanni\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\yanni\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.1\\microsoft.aspnetcore.authentication.jwtbearer.6.0.1.nupkg.sha512",
+    "C:\\Users\\yanni\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.1\\microsoft.data.sqlite.core.6.0.1.nupkg.sha512",
     "C:\\Users\\yanni\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",

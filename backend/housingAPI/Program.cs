@@ -1,13 +1,16 @@
 using HousingAPI.Data;
 using HousingAPI.Interfaces;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 
@@ -16,7 +19,6 @@ builder.Services.AddDbContext<HousingContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("housingDB"));
 });
-
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -33,6 +35,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
