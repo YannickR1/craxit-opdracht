@@ -1,12 +1,12 @@
 Requirements:
 
-Allemaal op een public gitrepo (bezorg me url asap uiteraard 😊), frontend en backend mogen in 1 repo.
-(Frontend) Gebruik Angular (Niet AngularJS uiteraard)
-(Backend) Gebruik .NET 6 Web Api project type
-Gebruik EF … met SQLite
-Gebruik automapper om de EF entities naar DTO s te mappen
-Gebruik JWT security (Backend en Frontend)
-Doe testing (unit testing, integration testing, wat dan ook), dit is nice to have.
+Allemaal op een public gitrepo (bezorg me url asap uiteraard 😊), frontend en backend mogen in 1 repo.;
+(Frontend) Gebruik Angular (Niet AngularJS uiteraard);
+(Backend) Gebruik .NET 6 Web Api project type;
+Gebruik EF … met SQLite;
+Gebruik automapper om de EF entities naar DTO s te mappen;
+Gebruik JWT security (Backend en Frontend);
+Doe testing (unit testing, integration testing, wat dan ook), dit is nice to have.;
 Maak een build en deploy pipeline, ook nice to have.
  
 
