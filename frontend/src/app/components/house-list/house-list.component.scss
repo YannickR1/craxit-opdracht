@@ -1,0 +1,40 @@
+.house-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    color: white;
+  }
+
+  &__container {
+    width: 50%;
+    background-color: #222629;
+    border-radius: 5px;
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+
+    &__house {
+
+        &:not(:last-child){
+            border-bottom: 1px white dotted;
+        }
+
+        display: flex;
+        justify-content: space-between;
+
+
+
+      &__name {
+        color: #86C232;
+        margin: .5em 0;
+      }
+
+      &__location{
+          color:#61892f;
+          margin: .5em 1em; 
+      }
+    }
+  }
+}

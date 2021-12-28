@@ -9,7 +9,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './pages/main/main.component';
 import { HouseListComponent } from './components/house-list/house-list.component';
-import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
+import { ButtonComponent } from './components/button/button.component';
+import { HouseDetailsComponent } from './pages/house-details/house-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LogoutButtonComponent } from './components/logout-button/logout-button.
     NotFoundComponent,
     HeaderComponent,
     HouseListComponent,
-    LogoutButtonComponent
+    ButtonComponent,
+    HouseDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {House} from '../../House'
+import {HOUSES} from '../../mock-houses'
 
 @Component({
   selector: 'app-house-list',
@@ -6,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./house-list.component.scss']
 })
 export class HouseListComponent implements OnInit {
-  @Input() staticHouseList?: [];
+  houses: House[] = HOUSES;
 
   constructor() { }
 
