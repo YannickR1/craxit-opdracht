@@ -63,6 +63,20 @@
       "rooms": 12,
       "price": 410000,
       "image": ""
+    },
+    {
+      "name": "test",
+      "city": "test",
+      "rooms": 23,
+      "price": 324234,
+      "id": 9
+    },
+    {
+      "name": "My House 2",
+      "city": "Mortsel",
+      "rooms": 12,
+      "price": 1234234,
+      "id": 10
     }
   ],
   "users": [

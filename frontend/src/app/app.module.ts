@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -16,6 +17,7 @@ import { HouseDetailsComponent } from './pages/house-details/house-details.compo
 import { RemoveButtonComponent } from './components/remove-button/remove-button.component';
 import { HouseListItemComponent } from './components/house-list-item/house-list-item.component';
 import { AddHouseComponent } from './components/add-house/add-house.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { AddHouseComponent } from './components/add-house/add-house.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

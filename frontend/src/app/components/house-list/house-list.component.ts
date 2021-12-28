@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { HouseService } from '../../services/house.service';
+import {NgxPaginationModule} from 'ngx-pagination';
 import {House} from '../../House'
+import { UiService } from '../../services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-house-list',
@@ -9,8 +12,12 @@ import {House} from '../../House'
 })
 export class HouseListComponent implements OnInit {
   houses: House[] = [];
+  showAddHouse: boolean;
+  subscription: Subscription;
 
-  constructor(private houseService: HouseService) { }
+  constructor(private houseService: HouseService, private uiService:UiService) { 
+    this.subscription = this.uiService.onAddHouseToggle().subscribe((v) =>(this.showAddHouse = v))
+  }
 
   ngOnInit(): void {
     this.houseService.getHouses().subscribe((houses) => this.houses = houses);
@@ -25,7 +32,7 @@ export class HouseListComponent implements OnInit {
   }
 
   addHouseToggle(){
-    console.log('toggle')
+    this.uiService.toggleAddHouse();
   }
 
   addHouse(house: House){

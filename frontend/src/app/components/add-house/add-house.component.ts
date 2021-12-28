@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { House } from '../../House'
+import { UiService } from 'src/app/services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-house',
@@ -15,7 +17,12 @@ export class AddHouseComponent implements OnInit {
   price: number;
   image: string;
 
-  constructor() { }
+  showAddHouse: boolean;
+  subscription: Subscription;
+
+  constructor(private uiService: UiService) { 
+    this.subscription = this.uiService.onAddHouseToggle().subscribe((v) =>(this.showAddHouse = v))
+   }
 
   ngOnInit(): void {
   }
