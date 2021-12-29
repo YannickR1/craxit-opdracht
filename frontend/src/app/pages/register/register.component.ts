@@ -28,14 +28,13 @@ export class RegisterComponent implements OnInit {
 
   handleRegister(){
     if (this.registerForm.valid){
-      this.authService.register(this.registerForm.value).subscribe((result) =>{
-        if (this.registerForm.valid) {
-          alert('register sucess')
-          console.log(result)
-        } else {
-          alert('failed to register')
+      this.authService.register(this.registerForm.value).subscribe({
+        next() {
+          alert('Registered succesfully');
+        }, error(msg) {
+          alert(msg.error)
         }
-      })
+      });
     }
   }
 }
