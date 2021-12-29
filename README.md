@@ -18,5 +18,7 @@ en kunnen ze er 1 selecteren voor details of te  editeren alsook een nieuw huis 
 Een huis heeft volgende kenmerken: Location (gewoon de stadsnaam bv), Prize(in euro), Rooms, Image
 
 Eigen comments:
-momenteel geen gebruik gemaakt van automapper, 
-JWT geimplementeerd maar authorization niet compleet
+geen gebruik gemaakt van automapper,
+Houses CRUD nog zonder authorize, JWT is wel aanwezig,
+Nog geen image bij huis (kenmerken: image),
+geen van beide nice to haves
