@@ -2,13 +2,14 @@
   <h1 class="house-details__title">{{ houseDetails.name }}</h1>
   <div *ngIf="!showEditHouse" class="house-details__no-edit">
     <div class="house-details__no-edit__container">
-      <app-button
-        text="{{ showEditHouse ? 'Close' : 'Edit' }}"
-        (btnClick)="editHouseToggle()"
-      ></app-button>
+
       <p>Location: {{ houseDetails.city }}</p>
       <p>Rooms: {{ houseDetails.rooms }}</p>
       <p>Price: {{ houseDetails.price }}</p>
+      <app-button
+      text="{{ showEditHouse ? 'Close' : 'Edit' }}"
+      (btnClick)="editHouseToggle()"
+    ></app-button>
     </div>
   </div>
   <div *ngIf="showEditHouse" class="house-details__edit">

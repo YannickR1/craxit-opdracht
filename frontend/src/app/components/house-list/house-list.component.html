@@ -1,15 +1,34 @@
 <section class="house-list">
   <h1 *ngIf="!showHouseDetails" class="house-list__title">Current houses</h1>
 
-  <app-add-house *ngIf="showAddHouse" (onAddHouse)="addHouse($event)"></app-add-house>
+  <app-add-house
+    *ngIf="showAddHouse"
+    (onAddHouse)="addHouse($event)"
+  ></app-add-house>
 
   <div *ngIf="!showAddHouse && !showHouseDetails" class="house-list__container">
-    <app-house-list-item *ngFor="let house of houses | paginate: { itemsPerPage: 6, currentPage: p }" [house]="house"  (onDeleteHouse)="deleteHouse(house)" (onSendHouseDetails)="getHouseDetails(house)" class="house-list__container__item">
+    <app-house-list-item
+      *ngFor="
+        let house of houses | paginate: { itemsPerPage: 6, currentPage: p }
+      "
+      [house]="house"
+      (onDeleteHouse)="deleteHouse(house)"
+      (onSendHouseDetails)="getHouseDetails(house)"
+      class="house-list__container__item"
+    >
     </app-house-list-item>
+
+    <pagination-controls
+      (pageChange)="p = $event"
+      class="pagination"
+    ></pagination-controls>
   </div>
-  <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
   <div *ngIf="showHouseDetails" class="house-list__house-details">
     <app-house-details [houseDetails]="houseDetails"></app-house-details>
   </div>
-  <app-button  *ngIf="!showHouseDetails" text="{{ showAddHouse ? 'Close' : 'Add'}}" (btnClick)="addHouseToggle()"></app-button>
+  <app-button
+    *ngIf="!showHouseDetails"
+    text="{{ showAddHouse ? 'Close' : 'Add' }}"
+    (btnClick)="addHouseToggle()"
+  ></app-button>
 </section>
