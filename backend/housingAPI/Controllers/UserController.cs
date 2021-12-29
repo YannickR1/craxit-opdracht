@@ -57,7 +57,6 @@ public class UserController : ControllerBase
         return await _context.Users.AnyAsync(x => x.Username == username.ToLower());
     }
 
-    [Authorize]
     [EnableCors("MyCorsImplementationPolicy", "*", "*")]
     [HttpPost("login")]
     public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
