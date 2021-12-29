@@ -1,0 +1,25 @@
+<section class="edit-house">
+    <form class="edit-house__form" (ngSubmit)="onSubmit()">
+        <div class="edit-house__form__container">
+            <label for="name">What would you call the house?</label>
+            <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="{{houseDetails.name}}">
+        </div>
+        <div class="edit-house__form__container">
+            <label for="city">In which city is the house located?</label>
+            <input type="text" name="city" [(ngModel)]="city" id="city" placeholder="{{houseDetails.city}}">
+        </div>
+        <div class="edit-house__form__container">
+            <label for="rooms">How many rooms?</label>
+            <input type="number" name="rooms" [(ngModel)]="rooms" id="rooms" placeholder="{{houseDetails.rooms}}">
+        </div>
+        <div class="edit-house__form__container">
+            <label for="price">How much does this house cost?</label>
+            <input type="number" name="price" [(ngModel)]="price" id="price" placeholder="{{houseDetails.price}}">
+        </div>
+        <!-- <div class="edit-house__form__container">
+            <label for="image">Add a picture</label>
+            <input type="image" name="image"  id="image">
+        </div> -->
+        <input type="submit" value="Save House" class="edit-house__form__btn">
+    </form>
+</section>

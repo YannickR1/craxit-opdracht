@@ -31,6 +31,12 @@ export class HouseService {
   addHouse(house: House):Observable<House> {
     window.location.reload()
     return this.http.post<House>(this.apiUrl + '/Houses', house, httpOptions);
+  }
+
+  editHouse(house: House):Observable<House>{
+    window.location.reload()
+    const url = `${this.apiUrl}/houses/`;
     
+    return this.http.put<House>(url, house, httpOptions);
   }
 }

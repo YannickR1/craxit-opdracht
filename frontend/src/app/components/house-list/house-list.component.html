@@ -1,15 +1,14 @@
 <section class="house-list">
-  <h1 class="house-list__title">Current houses</h1>
+  <h1 *ngIf="!showHouseDetails" class="house-list__title">Current houses</h1>
 
   <app-add-house *ngIf="showAddHouse" (onAddHouse)="addHouse($event)"></app-add-house>
 
   <div *ngIf="!showAddHouse && !showHouseDetails" class="house-list__container">
-    <app-house-list-item *ngFor="let house of houses" [house]="house"  (onDeleteHouse)="deleteHouse(house)" >
-      <p>{{house.name}}</p>
+    <app-house-list-item *ngFor="let house of houses" [house]="house"  (onDeleteHouse)="deleteHouse(house)" (onSendHouseDetails)="getHouseDetails(house)" >
     </app-house-list-item>
   </div>
   <div *ngIf="showHouseDetails">
-    <app-house-details></app-house-details>
+    <app-house-details [houseDetails]="houseDetails"></app-house-details>
   </div>
   <app-button  *ngIf="!showHouseDetails" text="{{ showAddHouse ? 'Close' : 'Add'}}" (btnClick)="addHouseToggle()"></app-button>
 </section>

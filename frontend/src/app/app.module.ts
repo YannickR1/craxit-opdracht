@@ -17,6 +17,7 @@ import { HouseDetailsComponent } from './components/house-details/house-details.
 import { RemoveButtonComponent } from './components/remove-button/remove-button.component';
 import { HouseListItemComponent } from './components/house-list-item/house-list-item.component';
 import { AddHouseComponent } from './components/add-house/add-house.component';
+import { EditHouseComponent } from './components/edit-house/edit-house.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AddHouseComponent } from './components/add-house/add-house.component';
     RemoveButtonComponent,
     HouseListItemComponent,
     AddHouseComponent,
+    EditHouseComponent,
   ],
   imports: [
     BrowserModule,
