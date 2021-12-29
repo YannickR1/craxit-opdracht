@@ -3,6 +3,7 @@ import { HouseService } from '../../services/house.service';
 import { House } from '../../House';
 import { UiService } from '../../services/ui.service';
 import { Subscription } from 'rxjs';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @Component({
   selector: 'app-house-list',
@@ -15,6 +16,7 @@ export class HouseListComponent implements OnInit {
   showAddHouse: boolean;
   showHouseDetails: boolean;
   subscription: Subscription;
+  p: number = 1;
 
   constructor(
     private houseService: HouseService,
