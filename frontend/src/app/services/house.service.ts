@@ -29,6 +29,8 @@ export class HouseService {
   }
 
   addHouse(house: House):Observable<House> {
+    window.location.reload()
     return this.http.post<House>(this.apiUrl + '/Houses', house, httpOptions);
+    
   }
 }
