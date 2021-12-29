@@ -2,15 +2,28 @@
   <h1 class="house-details__title">{{ houseDetails.name }}</h1>
   <div *ngIf="!showEditHouse" class="house-details__no-edit">
     <div class="house-details__no-edit__container">
-        <p>Location: {{ houseDetails.city }}</p>
-        <p>Rooms: {{ houseDetails.rooms }}</p>
-        <p>Price: {{ houseDetails.price }}</p>
-      </div>
+      <app-button
+        text="{{ showEditHouse ? 'Close' : 'Edit' }}"
+        (btnClick)="editHouseToggle()"
+      ></app-button>
+      <p>Location: {{ houseDetails.city }}</p>
+      <p>Rooms: {{ houseDetails.rooms }}</p>
+      <p>Price: {{ houseDetails.price }}</p>
+    </div>
   </div>
   <div *ngIf="showEditHouse" class="house-details__edit">
-      <app-edit-house [houseDetails]="houseDetails" (onEditHouse)="editHouse($event)"></app-edit-house>
-  </div>
-  <app-button text="{{ showEditHouse ? 'Close' : 'Edit'}}" (btnClick)="editHouseToggle()"></app-button>
-</section>
 
-<app-button text="Go back" (btnClick)="showHouseToggle()"></app-button>
+    <app-edit-house
+      [houseDetails]="houseDetails"
+      (onEditHouse)="editHouse($event)"
+      class="house-details__edit__app"
+    ></app-edit-house>
+    <app-button
+    text="{{ showEditHouse ? 'Close' : 'Edit' }}"
+    (btnClick)="editHouseToggle()"
+    class="house-details__edit__btn"
+  ></app-button>
+  </div>
+
+  <app-button text="Go back" (btnClick)="showHouseToggle()"></app-button>
+</section>

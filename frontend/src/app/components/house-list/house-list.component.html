@@ -7,7 +7,7 @@
     <app-house-list-item *ngFor="let house of houses" [house]="house"  (onDeleteHouse)="deleteHouse(house)" (onSendHouseDetails)="getHouseDetails(house)" >
     </app-house-list-item>
   </div>
-  <div *ngIf="showHouseDetails">
+  <div *ngIf="showHouseDetails" class="house-list__house-details">
     <app-house-details [houseDetails]="houseDetails"></app-house-details>
   </div>
   <app-button  *ngIf="!showHouseDetails" text="{{ showAddHouse ? 'Close' : 'Add'}}" (btnClick)="addHouseToggle()"></app-button>

@@ -1,0 +1,43 @@
+.house-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__no-edit {
+    &__container {
+      background-color: #222629;
+      height: 50%;
+      padding: 2em;
+      border-radius: 5px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      color: white;
+    }
+  }
+
+  &__edit{
+    background-color: #222629;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    border-radius: 5px;
+
+    &__app{
+        margin:0;
+    }
+
+    &__btn{
+        margin: 0em;
+    }
+  }
+}
