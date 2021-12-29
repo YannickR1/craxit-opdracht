@@ -6,9 +6,7 @@ export const environment = {
   production: false
 };
 
-export const userUrl = `https://localhost:7257/api/User`
-
-export var isLoggedIn = false;
+export const baseUrl = `https://localhost:7257/api`
 
 /*
  * For easier debugging in development mode, you can import the following file

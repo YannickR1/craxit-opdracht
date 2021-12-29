@@ -7,7 +7,6 @@ using System.Web.Http.Cors;
 
 namespace housingAPI.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class HousesController : ControllerBase

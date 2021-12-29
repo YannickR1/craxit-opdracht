@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { isLoggedIn } from 'src/environments/environment';
 import { AuthService } from '../../services/auth.service';
 
 @Component({

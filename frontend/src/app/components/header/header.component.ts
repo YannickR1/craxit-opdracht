@@ -11,4 +11,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  handleLogout(){
+    localStorage.clear()
+    alert('Logged out succesfully')
+    location.reload()
+  }
 }
