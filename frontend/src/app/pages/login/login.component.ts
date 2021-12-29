@@ -32,6 +32,9 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('token', res.token);
           console.log(res);
           alert('Logged in succesfully');
+          localStorage.setItem('isLoggedIn', 'true')
+          location.reload()
+          
         }, error(msg) {
           alert(msg.error)
         }
