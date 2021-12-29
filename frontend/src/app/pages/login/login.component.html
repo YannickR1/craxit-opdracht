@@ -1,9 +1,31 @@
-<form [formGroup]="loginForm" (ngSubmit)="handleLogin()" >
-    <h1>Login here</h1>
-    <input type="text" placeholder="Username" formControlName="username">
-    <input type="password" placeholder="Password" formControlName="password">
-    <button  type="submit">Submit</button>
+<section class="login">
+    <h1 class="login__title">Welcome to the housing browser</h1>
+  <div class="login__container">
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="handleLogin()"
+      class="login__container__form"
+    >
+      <h2>Login here</h2>
+      <div class="login__container__form__subcontainer">
+        <label class="login__container__form__subcontainer__label">Username</label>
+        <input type="text" placeholder="Username" formControlName="username" class="login__container__form__subcontainer__input" />
+      </div>
 
-    <p>Don't have an account yet? Register<a [routerLink]="['/register']"> here</a>!</p>
-
-</form>
+      <div class="login__container__form__subcontainer">
+        <label class="login__container__form__subcontainer__label">Password</label>
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          class="login__container__form__subcontainer__input"
+        />
+      </div>
+      <app-button text="Login" type="submit">Submit</app-button>
+    </form>
+    <p class="login__container__form__link">
+      Don't have an account yet? Register <a [routerLink]="['/register']" class="login__container__form__link-a">here</a
+      >!
+    </p>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+.register{
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    &__title{
+        margin-bottom: 3em;
+        color: #86c232;
+    }
+
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+
+        background-color: #222629;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px black;
+
+
+        &__form{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__subcontainer{
+                display: flex;
+                flex-direction: column;
+                margin: .5em;
+                align-items: center;
+
+                &__label{
+                    margin-bottom: .25em;
+                }
+            }
+
+            &__link{
+                &-a{
+                    color: white;
+                    text-decoration: none;
+                    &:hover{
+                        color: #86c232;
+                    }
+                }
+            }
+        }
+    }
+}
