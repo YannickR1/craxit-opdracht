@@ -6,16 +6,27 @@ import { Observable, Subject } from 'rxjs';
 })
 export class UiService {
   private showAddHouse: boolean = false;
-  private subject = new Subject<any>();
+  private showHouseDetails: boolean = false;
+  private subjectAddHouse = new Subject<any>();
+  private subjectShowDetails = new Subject<any>();
 
   constructor() { }
 
   toggleAddHouse(): void {
     this.showAddHouse = !this.showAddHouse;
-    this.subject.next(this.showAddHouse)
+    this.subjectAddHouse.next(this.showAddHouse)
+  }
+
+  toggleShowDetails(): void {
+    this.showHouseDetails = !this.showHouseDetails;
+    this.subjectShowDetails.next(this.showHouseDetails)
   }
 
   onAddHouseToggle(): Observable<any> {
-    return this.subject.asObservable();
+    return this.subjectAddHouse.asObservable();
+  }
+
+  onShowDetailsToggle(): Observable<any> {
+    return this.subjectShowDetails.asObservable();
   }
 }

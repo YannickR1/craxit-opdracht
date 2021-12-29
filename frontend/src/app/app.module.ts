@@ -13,7 +13,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './pages/main/main.component';
 import { HouseListComponent } from './components/house-list/house-list.component';
 import { ButtonComponent } from './components/button/button.component';
-import { HouseDetailsComponent } from './pages/house-details/house-details.component';
+import { HouseDetailsComponent } from './components/house-details/house-details.component';
 import { RemoveButtonComponent } from './components/remove-button/remove-button.component';
 import { HouseListItemComponent } from './components/house-list-item/house-list-item.component';
 import { AddHouseComponent } from './components/add-house/add-house.component';

@@ -13,10 +13,13 @@ import { Subscription } from 'rxjs';
 export class HouseListComponent implements OnInit {
   houses: House[] = [];
   showAddHouse: boolean;
+  showHouseDetails: boolean;
   subscription: Subscription;
 
   constructor(private houseService: HouseService, private uiService:UiService) { 
-    this.subscription = this.uiService.onAddHouseToggle().subscribe((v) =>(this.showAddHouse = v))
+    this.subscription = this.uiService.onAddHouseToggle().subscribe((v) =>(this.showAddHouse = v));
+    this.subscription = this.uiService.onShowDetailsToggle().subscribe((v) =>(this.showHouseDetails = v));
+
   }
 
   ngOnInit(): void {
@@ -38,5 +41,4 @@ export class HouseListComponent implements OnInit {
   addHouse(house: House){
     this.houseService.addHouse(house).subscribe((house) => this.houses.push(house));
   }
-
 }
