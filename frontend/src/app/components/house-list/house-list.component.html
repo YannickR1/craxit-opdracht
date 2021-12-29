@@ -4,7 +4,7 @@
   <app-add-house *ngIf="showAddHouse" (onAddHouse)="addHouse($event)"></app-add-house>
 
   <div *ngIf="!showAddHouse && !showHouseDetails" class="house-list__container">
-    <app-house-list-item *ngFor="let house of houses" [house]="house"  (onDeleteHouse)="deleteHouse(house)" (onSendHouseDetails)="getHouseDetails(house)" >
+    <app-house-list-item *ngFor="let house of houses" [house]="house"  (onDeleteHouse)="deleteHouse(house)" (onSendHouseDetails)="getHouseDetails(house)" class="house-list__container__item">
     </app-house-list-item>
   </div>
   <div *ngIf="showHouseDetails" class="house-list__house-details">

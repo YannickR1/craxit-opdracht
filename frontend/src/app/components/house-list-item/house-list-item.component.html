@@ -1,13 +1,18 @@
 <section class="house-list-item">
+  <div class="house-list-item__container">
     <div>
-        <h2 class="house-list-item__name">{{ house.name }}</h2>
-        <p class="house-list-item__location">
-            {{house.city}}
-          
-        </p>
-      </div>
-      <div class="house-list-item__buttons">
-        <app-button (btnClick)="showHouseToggle(house)" text="More details"></app-button>
-        <app-remove-button (click)="onDelete(house)"></app-remove-button>
-      </div>
+      <h2 class="house-list-item__container__name">{{ house.name }}</h2>
+      <p class="house-list-item__container__location">
+        {{ house.city }}
+      </p>
+    </div>
+    <div class="house-list-item__container__buttons">
+      <app-button
+        (btnClick)="showHouseToggle(house)"
+        text="More details"
+      ></app-button>
+      <app-remove-button (click)="onDelete(house)"></app-remove-button>
+    </div>
+  </div>
+
 </section>
