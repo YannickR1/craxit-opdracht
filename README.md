@@ -19,6 +19,6 @@ Een huis heeft volgende kenmerken: Location (gewoon de stadsnaam bv), Prize(in e
 
 Eigen comments:
 geen gebruik gemaakt van automapper,
-Houses CRUD nog zonder authorize, JWT is wel aanwezig
-Nog geen image bij huis (kenmerken: image)
+Houses CRUD nog zonder authorize, JWT is wel aanwezig,
+Nog geen image bij huis (kenmerken: image),
 geen van beide nice to haves
