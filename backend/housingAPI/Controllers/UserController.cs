@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Cryptography;
 using System.Text;
+using System.Web.Http.Cors;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -23,6 +24,7 @@ public class UserController : ControllerBase
 
     }
 
+    [EnableCors("MyCorsImplementationPolicy", "*", "*")]
     [HttpPost("register")]
     public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
     {
@@ -55,6 +57,8 @@ public class UserController : ControllerBase
         return await _context.Users.AnyAsync(x => x.Username == username.ToLower());
     }
 
+    [Authorize]
+    [EnableCors("MyCorsImplementationPolicy", "*", "*")]
     [HttpPost("login")]
     public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
     {

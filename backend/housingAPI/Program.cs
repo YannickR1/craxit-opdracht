@@ -6,9 +6,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -30,6 +27,21 @@ builder.Services.AddCors(options =>
                                                   .AllowAnyHeader()
                                                   .AllowAnyMethod();
                           });
+});
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
+        ValidateIssuer = false,
+
+        ValidateAudience = false,
+
+    };
+
 });
 
 
