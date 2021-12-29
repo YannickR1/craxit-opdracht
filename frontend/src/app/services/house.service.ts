@@ -4,12 +4,6 @@ import { Observable, of} from 'rxjs';
 import {House} from '../House';
 import { baseUrl } from '../../environments/environment';
 
-// const httpOptions = {
-//   headers: new HttpHeaders({
-//     'Content-type': 'application/json',
-//   })
-// }
-
 @Injectable({
   providedIn: 'root'
 })
@@ -17,17 +11,10 @@ export class HouseService {
 
   bearer = localStorage.getItem('token') 
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-type': 'application/json',
-      'Authorization': `${this.bearer}`
-    })
-  }
-
   constructor(private http:HttpClient) { }
 
   getHouses(): Observable<House[]> {
-    return this.http.get<House[]>(`${baseUrl}/Houses`, this.httpOptions,)
+    return this.http.get<House[]>(`${baseUrl}/Houses`, {headers: {  'Content-type': 'application/json' , 'Authorization' : `Bearer ${this.bearer}`}})
   }
 
   deleteHouse(house: House): Observable<House>{
@@ -38,13 +25,13 @@ export class HouseService {
 
   addHouse(house: House):Observable<House> {
     window.location.reload()
-    return this.http.post<House>(`${baseUrl}/Houses`, house, this.httpOptions);
+    return this.http.post<House>(`${baseUrl}/Houses`, house, {headers: {  'Content-type': 'application/json' , 'Authorization' : `Bearer ${this.bearer}`}});
   }
 
   editHouse(house: House):Observable<House>{
     window.location.reload()
     const url = `${baseUrl}/houses/`;
     
-    return this.http.put<House>(url, house, this.httpOptions);
+    return this.http.put<House>(url, house, {headers: {  'Content-type': 'application/json' , 'Authorization' : `Bearer ${this.bearer}`}});
   }
 }

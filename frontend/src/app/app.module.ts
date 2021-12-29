@@ -42,9 +42,9 @@ import { RegisterComponent } from './pages/register/register.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

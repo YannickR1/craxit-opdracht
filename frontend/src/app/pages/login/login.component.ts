@@ -26,14 +26,14 @@ export class LoginComponent implements OnInit {
 
   handleLogin() {
     if (this.loginForm.valid) {
-      this.authService.login(this.loginForm.value).subscribe({
+      this.authService.login(this.loginForm.value)
+      .subscribe({
         next(res) {
           localStorage.setItem('token', res.token);
           console.log(res);
           alert('Logged in succesfully');
           localStorage.setItem('isLoggedIn', 'true')
           location.reload()
-          
         }, error(msg) {
           alert(msg.error)
         }
