@@ -5,5 +5,4 @@ export interface House {
     rooms: number;
     price: number;
     image?: string;
-
 }

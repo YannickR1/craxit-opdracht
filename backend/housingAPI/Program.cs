@@ -6,6 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +20,18 @@ builder.Services.AddDbContext<HousingContext>(options =>
 {
     options.UseSqlite(builder.Configuration.GetConnectionString("housingDB"));
 });
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyCorsImplementationPolicy",
+                          builder =>
+                          {
+                              builder.WithOrigins("*")
+                                                  .AllowAnyHeader()
+                                                  .AllowAnyMethod();
+                          });
+});
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -31,6 +46,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("MyCorsImplementationPolicy");
 
 app.UseHttpsRedirection();
 

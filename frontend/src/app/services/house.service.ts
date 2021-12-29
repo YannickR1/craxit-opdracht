@@ -13,13 +13,13 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class HouseService {
-  // private apiUrl = "https://localhost:7257/api/Houses" .net backend not working yet
-  private apiUrl = "http://localhost:5000" //mock backend
+  private apiUrl = "https://localhost:7257/api" 
+
 
   constructor(private http:HttpClient) { }
 
   getHouses(): Observable<House[]> {
-    return this.http.get<House[]>(this.apiUrl + '/houses');
+    return this.http.get<House[]>(this.apiUrl + '/Houses');
   }
 
   deleteHouse(house: House): Observable<House>{
@@ -29,6 +29,6 @@ export class HouseService {
   }
 
   addHouse(house: House):Observable<House> {
-    return this.http.post<House>(this.apiUrl + '/houses', house, httpOptions);
+    return this.http.post<House>(this.apiUrl + '/Houses', house, httpOptions);
   }
 }

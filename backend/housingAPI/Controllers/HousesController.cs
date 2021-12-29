@@ -2,9 +2,11 @@
 using HousingAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Web.Http.Cors;
 
 namespace housingAPI.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class HousesController : ControllerBase
@@ -17,12 +19,14 @@ namespace housingAPI.Controllers
             _context = context;
         }
 
+        [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpGet]
         public async Task<ActionResult<List<House>>> Get()
         {
             return Ok(await _context.Houses.ToListAsync());
         }
 
+        [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpGet("{id}")]
         public async Task<ActionResult<House>> Get(int id)
 
@@ -33,6 +37,7 @@ namespace housingAPI.Controllers
             return Ok(house);
         }
 
+        [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpPost]
         public async Task<ActionResult<List<House>>> AddHouse(House house)
 
@@ -43,6 +48,7 @@ namespace housingAPI.Controllers
             return Ok(await _context.Houses.ToListAsync());
         }
 
+        [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpPut]
 
         public async Task<ActionResult<List<House>>> UpdateHero(House request)
@@ -62,6 +68,7 @@ namespace housingAPI.Controllers
             return Ok(await _context.Houses.ToListAsync());
         }
 
+        [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<List<House>>> Delete(int id)
 
