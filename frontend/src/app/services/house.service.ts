@@ -5,7 +5,8 @@ import {House} from '../House';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Content-type': 'application/json'
+    'Content-type': 'application/json',
+    'Authorization': 'Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJzdHJpbmciLCJuYmYiOjE2NDA3MDU1OTMsImV4cCI6MTY0MTMxMDM5MywiaWF0IjoxNjQwNzA1NTkzfQ.UuZRrzGLWMoPROXd3ArH7iZA5u5wsuU3vjz61SJPsX_EdFy3GPcHrXMnd4LQ5WJZypay2W3arlIhl5IzEcxZ8w'
   })
 }
 
@@ -19,7 +20,7 @@ export class HouseService {
   constructor(private http:HttpClient) { }
 
   getHouses(): Observable<House[]> {
-    return this.http.get<House[]>(this.apiUrl + '/Houses');
+    return this.http.get<House[]>(this.apiUrl + '/Houses',httpOptions);
   }
 
   deleteHouse(house: House): Observable<House>{

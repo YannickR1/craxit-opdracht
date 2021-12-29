@@ -7,7 +7,7 @@ using System.Web.Http.Cors;
 
 namespace housingAPI.Controllers
 {
-    
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class HousesController : ControllerBase
@@ -20,7 +20,6 @@ namespace housingAPI.Controllers
             _context = context;
         }
 
-        [Authorize]
         [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpGet]
         public async Task<ActionResult<List<House>>> Get()
@@ -28,7 +27,6 @@ namespace housingAPI.Controllers
             return Ok(await _context.Houses.ToListAsync());
         }
 
-        [Authorize]
         [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpGet("{id}")]
         public async Task<ActionResult<House>> Get(int id)
@@ -40,7 +38,6 @@ namespace housingAPI.Controllers
             return Ok(house);
         }
 
-        [Authorize]
         [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpPost]
         public async Task<ActionResult<List<House>>> AddHouse(House house)
@@ -52,7 +49,6 @@ namespace housingAPI.Controllers
             return Ok(await _context.Houses.ToListAsync());
         }
 
-        [Authorize]
         [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpPut]
 
@@ -73,7 +69,6 @@ namespace housingAPI.Controllers
             return Ok(await _context.Houses.ToListAsync());
         }
 
-        [Authorize]
         [EnableCors("MyCorsImplementationPolicy", "*", "*")]
         [HttpDelete("{id}")]
         public async Task<ActionResult<List<House>>> Delete(int id)
