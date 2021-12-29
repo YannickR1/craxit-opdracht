@@ -50,8 +50,6 @@ public class UserController : ControllerBase
         };
     }
 
-
-
     private async Task<bool> UserExists(string username)
     {
         return await _context.Users.AnyAsync(x => x.Username == username.ToLower());
@@ -62,7 +60,7 @@ public class UserController : ControllerBase
     public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
     {
         var user = await _context.Users
-            .SingleOrDefaultAsync(x => x.Username == loginDto.Username);
+            .SingleOrDefaultAsync(x => x.Username.ToLower() == loginDto.Username.ToLower());
 
         if (user == null) return Unauthorized("Invalid username");
 
