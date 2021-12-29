@@ -9,7 +9,7 @@ namespace HousingAPI.Models
         public string? Name { get; set; }
         public string? City { get; set; }
         public long? Rooms { get; set; }
-        public byte[]? Price { get; set; }
+        public decimal Price { get; set; }
         public byte[]? Image { get; set; }
     }
 }
